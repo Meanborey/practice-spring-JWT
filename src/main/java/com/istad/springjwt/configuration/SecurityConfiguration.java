@@ -39,15 +39,15 @@ public class SecurityConfiguration {
     @Autowired
     UserDetailsService userDetailsService;
 
-    @Bean
-    public InMemoryUserDetailsManager userDetailsManager(){
-        UserDetails user = User.builder()
-                .username("borey")
-                .password("{noop}12345")
-                .authorities("read","write")
-                .build();
-        return new InMemoryUserDetailsManager(user);
-    }
+//    @Bean
+//    public InMemoryUserDetailsManager userDetailsManager(){
+//        UserDetails user = User.builder()
+//                .username("borey")
+//                .password("{noop}12345")
+//                .authorities("read","write")
+//                .build();
+//        return new InMemoryUserDetailsManager(user);
+//    }
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http)throws Exception{
 
